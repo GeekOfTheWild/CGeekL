@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include "findCommand.h"
 
 class Commands
 {
