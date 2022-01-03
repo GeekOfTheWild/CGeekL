@@ -10,6 +10,5 @@ int main() {
         std::getline(std::cin, input);
         findCommand(input);
     }
-    
     return 0;
 }               
