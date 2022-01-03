@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 class Commands
 {
@@ -32,10 +33,18 @@ public:
     }
 };
 
+void Username()
+{
+    std::cout << "Please input a username: ";
+    std::string Username;
+    std::cin >> Username;
+}
+
 int main() {
+    Username();
     Commands commands;
     while (commands.input != "exit") {
-        std::cout << "CGeekL > ";
+        std::cout << Username << "CGeekL > ";
         std::getline(std::cin, commands.input);
         commands.findCommand();
     }
