@@ -6,15 +6,15 @@ class Commands
 private:
     void Print()
     {
-        std::cout << "CGeekL: Hello" << std::endl;
+        std::cout << " CGeekL: Hello" << std::endl;
     }
     void Bye()
     {
-        std::cout << "CGeekL: Bye" << std::endl;
+        std::cout << " CGeekL: Bye" << std::endl;
     }
     void supercalifragilisticexpialidocious()
     {
-        std::cout << "CGeekL: You discovered a secret message! Congrats! Supercalifragilisticexpialidocious!" << std::endl;
+        std::cout << " CGeekL: You discovered a secret message! Congrats! Supercalifragilisticexpialidocious!" << std::endl;
     }
 public:
     std::string input;
