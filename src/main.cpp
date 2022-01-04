@@ -45,11 +45,18 @@ void Username()
 }
 
 int main() {
-    Username();
+    std::cout << "Please input a username: ";
+    std::string Username;
+    std::getline(std::cin, Username);
     Commands commands;
     std::cout << Username << std::endl;
     bool repeat = true;
     while (repeat) {
+        if (Username == "1")
+        {
+            std::cout << "Error, username set incrorrectly or is invalid" << std::endl;
+            return 0;
+        }
         if (commands.input == "exit")
         {
             return 0;
