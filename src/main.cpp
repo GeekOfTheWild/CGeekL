@@ -19,8 +19,8 @@ private:
     }
 public:
     ~Commands()
-    {
-        std::cout << "Ended";
+    {       
+        std::cout << "Ended" << std::endl;
     }
     std::string input;
     void findCommand()
@@ -41,19 +41,20 @@ void Username()
 {
     std::cout << "Please input a username: ";
     std::string Username;
-    std::cin >> Username;
+    std::getline(std::cin, Username);
 }
 
 int main() {
     Username();
     Commands commands;
+    std::cout << Username << std::endl;
     bool repeat = true;
     while (repeat) {
         if (commands.input == "exit")
         {
-
+            return 0;
         }
-        std::cout << Username << "CGeekL > ";
+        std::cout << Username << " CGeekL > ";
         std::getline(std::cin, commands.input);
         commands.findCommand();
     }
