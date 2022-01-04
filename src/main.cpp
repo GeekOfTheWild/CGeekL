@@ -13,11 +13,15 @@ private:
     {
         std::cout << " CGeekL: Bye" << std::endl;
     }
-    void supercalifragilisticexpialidocious()
+    void Supercalifragilisticexpialidocious()
     {
         std::cout << " CGeekL: You discovered a secret message! Congrats! Supercalifragilisticexpialidocious!" << std::endl;
     }
 public:
+    ~Commands()
+    {
+        std::cout << "Ended";
+    }
     std::string input;
     void findCommand()
     {
@@ -27,7 +31,7 @@ public:
         
             Bye();
         else if (input == "supercalifragilisticexpialidocious")
-            supercalifragilisticexpialidocious();
+            Supercalifragilisticexpialidocious();
         else
             system(input.c_str());
     }
@@ -43,7 +47,12 @@ void Username()
 int main() {
     Username();
     Commands commands;
-    while (commands.input != "exit") {
+    bool repeat = true;
+    while (repeat) {
+        if (commands.input == "exit")
+        {
+
+        }
         std::cout << Username << "CGeekL > ";
         std::getline(std::cin, commands.input);
         commands.findCommand();
